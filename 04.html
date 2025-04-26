@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ocidental-Link</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <!-- Cabeçalho com imagem -->
+  <header class="topo">
+    <img src="top.png" alt="Imagem de cabeçalho">
+  </header>
+
+  <!-- Menu de navegação -->
+  <nav class="menu-navegacao">
+    <ul>
+      <li><a href="https://0cidentallink.github.io/new/">Início</a></li>
+      <li><a href="https://0cidentallink.github.io/noticias/">Notícias</a></li>
+      <li><a href="#">Entreterimento</a></li>
+      
+    
+    </ul>
+  </nav>
+
+  <!-- Seção principal -->
+  <main class="conteudo">
+       
+    <!-- Notícia -->
+      <section class="sessao-texto">
+      <div class="noticia">
+          <h2>Vídeo mostra suposto ladrão sendo atacado por cachorro; falta de socorro gera polêmica</h2>
+          <img src="04NO.PNG" alt="imagem">
+        <div class="conteudo">
+        <p>Um vídeo que circula nas redes sociais mostra o momento em que um suposto ladrão é atacado pelo cachorro de uma residência durante uma tentativa de invasão. As imagens mostram o homem sendo mordido enquanto tenta se desvencilhar do animal.</p>
+            <p>O caso vem gerando grande polêmica, principalmente pelo fato de que o suspeito não recebeu ajuda imediata. Internautas se dividem entre aqueles que defendem a reação do cão e dos moradores e os que criticam a ausência de socorro ao homem ferido.</p>
+            <p>Internautas pedem que autoridades sejam acionadas e o caso seja investigado.</p>
+            
+              <div style="width: 80%; margin:20px auto;">
+            <blockquote  class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DI6aVYVOR-8/?igsh=Z3B2NDAxcDdhczB3" data-instgrm-version="14" style="background:#FFF; border:0; margin-left: 20%;:540px; width:100%; padding:0;">
+            </blockquote>
+
+            <script async src="https://www.instagram.com/embed.js"></script>
+        
+        
+        </div>
+        
+  
+
+          </div>
+          </div>
+          </section>
+ 
+    
+    <h2 style="color: blue; text-align: center; ">Veja também </h2>
+      
+    
+
+       <!-- Notícia -->
+
+         <section class="sessao-texto">
+      <div class="noticia">
+          <h2><a href="03.html" style="text-decoration: none; color: black;">Corpo de homem atacado por onça é achado em MS</a></h2>
+        <div class="conteudo">
+      <p>Após a morte de Jorge Ávalos, caseiro de 60 anos atacado por uma onça-pintada em uma propriedade rural de Aquidauana (MS), no último dia 21, autoridades policiais e ambientais do estado sul-mato-grossense realizam buscas pelo animal na região…</p>
+       <a class="botao-noticia" href="03.html">VEJA MAIS</a>
+    
+    </div>
+    </div>
+      
+        </section> 
+      
+      <!-- noticia -->
+    <section class="sessao-texto">
+
+      <div class="noticia">
+
+          <h2><a href="01.html"> Pit bull ataca e mata tutora dentro de casa em Cidade Ocidental GO </a></h2>
+         <img src="100.jpg" alt="Imagem da notícia">
+    <div class="conteudo">
+      <p>Uma mulher de 31 anos foi atacada pelo próprio cachorro da raça pit bull e acabou morta, na Cidade Ocidental (GO), cidade do entorno do Distrito Federal. O caso ocorreu na manhã do último domingo (13), no condomínio Parque Estrela Dalva.</p>
+        <a class="botao-noticia" href="01.html">VEJA MAIS</a>
+    
+    </div>
+  </div>
+      
+      </section>  
+      
+      <!-- noticia -->
+      
+          <section class="sessao-texto">
+      <div class="noticia">
+          <h2><a href="02.html"> Menina de 6 anos morreu após buscar atendimento para crise de asma em hospital</a></h2>
+         <img src="101.jpg" alt="Imagem da notícia">
+    <div class="conteudo">
+      <p> Segundo a família, Maria Eduarda Ferreira da Silva morreu logo após receber uma medicação intramuscular. Ela deu entrada no hospital da Cidade Ocidental com dor forte no peito.</p>
+        <a class="botao-noticia" href="02.html">VEJA MAIS</a>
+    
+    </div>
+  </div>
+      </section>
+      
+      
+      
+      
+      
+    <script>
+    const carousel = document.querySelector('.carousel');
+    const indicatorsContainer = document.getElementById('indicators');
+    const slides = document.querySelectorAll('.carousel li');
+    const totalSlides = slides.length;
+    let currentIndex = 0;
+
+    // Criar indicadores
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('indicator');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => goToSlide(i));
+      indicatorsContainer.appendChild(dot);
+    }
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      document.querySelectorAll('.indicator').forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
+      });
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateCarousel();
+    });
+  </script>
+        
+  </main>
+
+   
+</body>
+</html>
