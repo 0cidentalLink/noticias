@@ -45,7 +45,20 @@
           <img src="04NO.PNG" alt="imagem">
         <div class="conteudo">
         <p>Um vídeo que circula nas redes sociais mostra o momento em que um suposto ladrão é atacado pelo cachorro de uma residência durante uma tentativa de invasão. As imagens mostram o homem sendo mordido enquanto tenta se desvencilhar do animal.</p>
-            <p>O caso vem gerando grande polêmica, principalmente pelo fato de que o suspeito não recebeu ajuda imediata. Internautas se dividem entre aqueles que defendem a reação do cão e dos moradores e os que criticam a ausência de socorro ao homem ferido.</p>
+           <!--Publicidade -->
+ <div id="publicidade">
+
+<script>
+  fetch('publicidade01.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('publicidade').innerHTML = html;
+    })
+    .catch(err => console.error('Erro ao carregar publicidade:', err));
+</script>
+
+      </div>   
+          <p>O caso vem gerando grande polêmica, principalmente pelo fato de que o suspeito não recebeu ajuda imediata. Internautas se dividem entre aqueles que defendem a reação do cão e dos moradores e os que criticam a ausência de socorro ao homem ferido.</p>
             <p>Internautas pedem que autoridades sejam acionadas e o caso seja investigado.</p>
             
               <div style="width: 80%; margin:20px auto;">
