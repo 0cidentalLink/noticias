@@ -55,6 +55,19 @@
 
   
 </p>
+       <!--Publicidade -->
+ <div id="publicidade">
+
+<script>
+  fetch('publicidade01.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('publicidade').innerHTML = html;
+    })
+    .catch(err => console.error('Erro ao carregar publicidade:', err));
+</script>
+
+      </div>  
 <p>“Levei ela e, no hospital, aplicaram um remédio errado e mataram minha filha. Eu falei para ele – profissional da saúde – que ela nunca tinha tomado esse remédio por via intramuscular, sempre com o soro, mas ele disse que, por conta da idade dela, podia aplicar”, disse a mãe.
 
   
